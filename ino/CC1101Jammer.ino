@@ -9,8 +9,6 @@ int gdo0 = 2;
 int gdo2 = 4;
 
 ezButton buttonPause(0);
-//ezButton buttonDecrease(1);
-//ezButton buttonIncrease(2);
 bool paused = true;
 
 float frequency = 433.92;
@@ -63,8 +61,6 @@ void sendRandomData() {
 void setup() {
     Serial.begin(115200);
     buttonPause.setDebounceTime(30);
-    //buttonIncrease.setDebounceTime(30);
-    //buttonDecrease.setDebounceTime(30);
     cc1101initialize();
 
     if (ELECHOUSE_cc1101.getCC1101()) {
@@ -88,23 +84,7 @@ void loop() {
         Serial.println(F("Play"));
       }
     }
-    /*
-    if (paused) {
-      if (buttonIncrease.isPressed()) {
-        frequency += 0.1;
-        ELECHOUSE_cc1101.setMHZ(frequency);
-        Serial.print(F("Frequency : "));
-        Serial.println(frequency);
-      }
 
-      if (buttonDecrease.isPressed()) {
-        frequency -= 0.1;
-        ELECHOUSE_cc1101.setMHZ(frequency);
-        Serial.print(F("Frequency : "));
-        Serial.println(frequency);
-      }
-    }
-    */
     if (!paused) {
       sendRandomData();
     }
