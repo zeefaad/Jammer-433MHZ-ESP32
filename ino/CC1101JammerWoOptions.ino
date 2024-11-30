@@ -9,6 +9,7 @@ int gdo0 = 2;
 int gdo2 = 4;
 
 ezButton buttonPause(0);
+const int ledPin = 12;
 bool paused = true;
 
 float frequency = 433.92;
@@ -62,6 +63,7 @@ void setup() {
     Serial.begin(115200);
     buttonPause.setDebounceTime(30);
     cc1101initialize();
+    pinMode(ledPin, OUTPUT);
 
     if (ELECHOUSE_cc1101.getCC1101()) {
         Serial.println(F("CC1101 initialized. Connection OK"));
@@ -77,9 +79,11 @@ void loop() {
     if (buttonPause.isPressed()) {
       paused = !paused;
       if (paused) {
-        Serial.println(F("Pause"));
+        Serial.println(F("Stop"));
+        digitalWrite(ledPin, LOW);
       } else {
         Serial.println(F("Play"));
+        digitalWrite(ledPin, HIGH);
       }
     }
 

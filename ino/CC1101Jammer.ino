@@ -77,7 +77,7 @@ void loop() {
     if (buttonPause.isPressed()) {
       paused = !paused;
       if (paused) {
-        Serial.println(F("Pause"));
+        Serial.println(F("STOP"));
       } else {
         Serial.println(F("Play"));
       }

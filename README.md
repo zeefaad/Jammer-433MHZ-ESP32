@@ -16,7 +16,7 @@ The aim of this project is to design a 433MHz rf jammer using the CC1101 module 
 
 - (1x) Led ![led](./src/led.png)
 
-- (1x) 220 ohm resistor ![resistor](./src/resistor.png)
+- (1x) 220Ω (ohm) resistor ![resistor](./src/resistor.png)
 
 - (1x) Prototype PCB ![prototype-pcb](./src/prototypepcb.png)
 
@@ -36,7 +36,12 @@ The aim of this project is to design a 433MHz rf jammer using the CC1101 module 
 | 7       | MISO/GDO1   | GPIO19 (Pin 19) | Output    | SPI data output pin                                               |
 | 8       | GDO2        | GPIO4 (Pin 4)   | Output    | Data output pin                                                   |
 
-### Optional wiring 
+### Optional wiring (Led)
+
+| Pin No.       | Item          | Pin ESP32       | Direction | Description                                      |
+|---------------|---------------|-----------------|-----------|--------------------------------------------------|
+| Anode (+)     |         | GPIO12 (Pin 12) | Output    | Connect the anode of the LED directly to GPIO12 |
+| Cathode (-)   | Resistor 220Ω (ohm) | GND             |           | Connect the cathode of the LED to GND via a 220Ω (ohm) resistor |
 
 ---
 
