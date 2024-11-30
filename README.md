@@ -31,4 +31,12 @@ The aim of this project is to design a 387-464MHz rf jammer using the CC1101 rf 
 | 7       | MISO/GDO1   | GPIO19 (Pin 19) | Output    | SPI data output pin                                               |
 | 8       | GDO2        | GPIO4 (Pin 4)   | Output    | Data output pin                                                   |
 
-## Optional wiring of display to potentiometer
+## Optional wiring of display to potentiometer to the ESP32
+
+## How to compile the project
+
+Libraries required :
+- SmartRC-CC1101-Driver-Lib by LSatan
+- ezButton by ArduinoGetStarted
+
+Then you can simply choose the code that suits you and compile it in an arduino IDE. (You'll probably need a board manager like esp32 by Espressif Systems to detect your esp)
