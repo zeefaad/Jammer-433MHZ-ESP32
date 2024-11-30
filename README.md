@@ -2,6 +2,8 @@
 ## Aim
 The aim of this project is to design a 387-464MHz rf jammer using the CC1101 rf module and the ESP32 (ESP32-WROOM-32u here) with frequency control via a potentiometer and an I2C display screen.
 
+---
+
 ## What you need
 
 ### Mandatory
@@ -18,7 +20,10 @@ The aim of this project is to design a 387-464MHz rf jammer using the CC1101 rf 
 
 - (1x) Prototype PCB ![prototype-pcb](./src/prototypepcb.png)
 
-## Pinout and wiring of the CC1101 module to the ESP32
+---
+## Wiring
+
+### Pinout and wiring of the CC1101 module to the ESP32
 
 | Pin No. | Item        | Pin ESP32       | Direction | Description                                                        |
 |---------|-------------|-----------------|-----------|--------------------------------------------------------------------|
@@ -31,7 +36,9 @@ The aim of this project is to design a 387-464MHz rf jammer using the CC1101 rf 
 | 7       | MISO/GDO1   | GPIO19 (Pin 19) | Output    | SPI data output pin                                               |
 | 8       | GDO2        | GPIO4 (Pin 4)   | Output    | Data output pin                                                   |
 
-## Optional wiring of display to potentiometer to the ESP32
+### Optional wiring of display to potentiometer to the ESP32
+
+---
 
 ## How to compile the project
 
