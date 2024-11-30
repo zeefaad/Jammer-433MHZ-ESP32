@@ -4,6 +4,10 @@ The aim of this project is to design a 433MHz rf jammer using the CC1101 module 
 
 ---
 
+## Finished Pcb result
+
+![frontpcb](./src/frontpcb.png)
+
 ## What you need
 
 ### Mandatory
@@ -45,6 +49,10 @@ The aim of this project is to design a 433MHz rf jammer using the CC1101 module 
 
 ---
 
+## Power supply
+
+The device needs (best) an external battery to power it or a 5V supply. A possible improvement would be to add a lipo battery (requires a voltage booster and a charge regulator).
+
 ## How to compile the project
 
 Libraries required :
@@ -52,3 +60,7 @@ Libraries required :
 - ezButton by ArduinoGetStarted
 
 Then you can simply choose the code that suits you and compile it in an arduino IDE. (You'll probably need a board manager like esp32 by Espressif Systems to detect your esp)
+
+## Wiring on pcb
+
+![frontpcb](./src/backpcb.png)
