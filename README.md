@@ -53,6 +53,10 @@ The aim of this project is to design a 433MHz rf jammer using the CC1101 module 
 
 The device needs (best) an external battery to power it or a 5V supply. A possible improvement would be to add a lipo battery (requires a voltage booster and a charge regulator).
 
+## Usage
+
+Just click on the esp32 "boot" button to pause (the LED should go out), then click again to restart.
+
 ## How to compile the project
 
 Libraries required :
